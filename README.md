@@ -20,11 +20,12 @@ This report documents the security assessment and hardening process of **TCP Por
 ```bash
 nmap -Pn -p 445 172.20.10.12
 
-### Result
+**Result**
 PORT    STATE SERVICE
 445/tcp open  microsoft-ds
 
-🔧 Hardening Process
+## 🔧 Hardening Process
+
 Opened PowerShell as Administrator
 
 Checked status of SMB and Server service:
