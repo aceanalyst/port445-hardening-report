@@ -25,7 +25,7 @@ nmap -Pn -p 445 172.20.10.12
 PORT    STATE SERVICE
 445/tcp open  microsoft-ds
 ```
-
+```
 ## 🔧 Hardening Process
 
 Opened PowerShell as Administrator
@@ -42,6 +42,7 @@ Disabled Server service:
 
 Stop-Service -Name 'LanmanServer' -Force
 Set-Service -Name 'LanmanServer' -StartupType Disabled
+```
 
 ✅ Verification
 After hardening, we re-scanned the same port:
