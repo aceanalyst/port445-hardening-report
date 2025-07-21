@@ -27,7 +27,7 @@ PORT    STATE SERVICE
 445/tcp open  microsoft-ds
 ```
 
-```
+
 ## 🔧 Hardening Process
 
 Opened PowerShell as Administrator
