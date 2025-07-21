@@ -31,20 +31,23 @@ PORT    STATE SERVICE
 ```
 ## Hardening Process
 
-Opened PowerShell as Administrator
+1. Opened PowerShell as Administrator
 
-Checked status of SMB and Server service:
+2. Checked status of SMB and Server service:
 
 ```
 Get-Service | Where-Object { $_.Name -like "*smb*" -or $_.DisplayName -like "*server*" }
 ```
 
-Disabled SMBv1 (if enabled):
+3. Disabled SMBv1 (if enabled):
 
+```
 Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
+```
 
-Disabled Server service:
+4. Disabled Server service:
 
+```
 Stop-Service -Name 'LanmanServer' -Force
 Set-Service -Name 'LanmanServer' -StartupType Disabled
 ```
