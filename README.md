@@ -1,12 +1,12 @@
-# 🔐 Port 445 Hardening Report
+# Port 445 Hardening Report
 
-## 🧾 Summary
+## Summary
 
 This report documents the security assessment and hardening process of **TCP Port 445 (Microsoft-DS)** on a Windows 10 host (`172.20.10.12`). Port 445 is commonly used for SMB file sharing and is a well-known target for attacks such as **EternalBlue**.
 
 ---
 
-## 📍 Host Information
+## Host Information
 
 - **IP Address:** `172.20.10.12`
 - **OS Version:** Windows 10 (Build 19045.5965)
@@ -14,14 +14,14 @@ This report documents the security assessment and hardening process of **TCP Por
 
 ---
 
-## 🔎 Initial Scan
+## Initial Scan
 
 **Command used:**
 ```bash
 nmap -Pn -p 445 172.20.10.12
 
 ```
-### ✅ Result
+**Result**
 
 PORT    STATE SERVICE
 
@@ -29,7 +29,7 @@ PORT    STATE SERVICE
 445/tcp open  microsoft-ds
 
 ```
-## 🔧 Hardening Process
+## Hardening Process
 
 Opened PowerShell as Administrator
 
@@ -47,7 +47,7 @@ Stop-Service -Name 'LanmanServer' -Force
 Set-Service -Name 'LanmanServer' -StartupType Disabled
 ```
 
-✅ Verification
+Verification
 After hardening, we re-scanned the same port:
 
 Command used:
