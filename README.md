@@ -52,15 +52,19 @@ Stop-Service -Name 'LanmanServer' -Force
 Set-Service -Name 'LanmanServer' -StartupType Disabled
 ```
 
-Verification
+## Verification
 After hardening, we re-scanned the same port:
 
 Command used:
+```
 nmap -Pn -p 445 172.20.10.12
+```
 
 Result:
+```
 PORT    STATE  SERVICE
 445/tcp closed microsoft-ds
+```
 
 
 
