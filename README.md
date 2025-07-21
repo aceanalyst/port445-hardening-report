@@ -23,9 +23,9 @@ nmap -Pn -p 445 172.20.10.12
 ```
 **Result**
 
+```
 PORT    STATE SERVICE
 
-```
 445/tcp open  microsoft-ds
 
 ```
