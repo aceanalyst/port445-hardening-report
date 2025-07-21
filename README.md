@@ -66,5 +66,12 @@ PORT    STATE  SERVICE
 445/tcp closed microsoft-ds
 ```
 
+## 📊 Summary
+
+| Item                   | Status         |
+|------------------------|----------------|
+| Initial Scan           | Port 445 open  |
+| Hardening Applied      | ✅ Yes         |
+| Post-Hardening Scan    | Port 445 closed |
 
 
