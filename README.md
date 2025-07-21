@@ -35,7 +35,9 @@ Opened PowerShell as Administrator
 
 Checked status of SMB and Server service:
 
+```
 Get-Service | Where-Object { $_.Name -like "*smb*" -or $_.DisplayName -like "*server*" }
+```
 
 Disabled SMBv1 (if enabled):
 
