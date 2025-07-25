@@ -74,4 +74,11 @@ PORT    STATE  SERVICE
 | Hardening Applied      | ✅ Yes         |
 | Post-Hardening Scan    | Port 445 closed |
 
+Notes
+
+1. Port 445 (SMB) is often exploited by malware like WannaCry and EternalBlue.
+
+2. Disabling it removes unnecessary attack surfaces.
+
+3. For networks requiring SMB, use firewall rules instead of disabling the service entirely.
 
